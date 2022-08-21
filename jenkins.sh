@@ -9,5 +9,5 @@ sudo rm -rf /var/lib/dpkg/lock*
 sudo dpkg --configure -a
 sudo apt update 
 sudo apt-get update -y
-sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
-sudo apt install -y jenkins 
+#sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+#sudo apt install -y jenkins 
