@@ -7,6 +7,7 @@ sudo apt-get upgrade -y
 sudo rm /var/lib/dpkg/lock-frontend
 sudo rm /var/cache/apt/archives/lock
 sudo rm /var/lib/dpkg/lock
+sudo dpkg --configure -a
 sudo apt update -y
 sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
 sudo apt install -y jenkins 
