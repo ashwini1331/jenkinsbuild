@@ -4,13 +4,10 @@ sudo apt install openjdk-8-jdk
 sudo wget -q -O - https://pkg.jenkins.io/debian/jenkins.io.key | sudo apt-key add -
 sudo apt-get update -y
 sudo apt-get upgrade -y
-sudo rm /var/lib/dpkg/lock-frontend
+sudo rm /var/lib/apt/lists/lock
 sudo rm /var/cache/apt/archives/lock
-sudo rm /var/lib/dpkg/lock
+sudo rm /var/lib/dpkg/lock*
 sudo dpkg --configure -a
 sudo apt update -y
 sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
 sudo apt install -y jenkins 
-
-
-
