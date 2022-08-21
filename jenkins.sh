@@ -1,9 +1,9 @@
 #!/bin/bash
-sudo yum update -y 
-sudo yum -y install wget
-sudo wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat-stable/jenkins.repo
-sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
-sudo yum install java-11-openjdk
-sudo yum upgrade
-sudo yum install -y jenkins && sudo systemctl start jenkins
+sudo apt update -y
+sudo apt install openjdk-8-jdk
+sudo wget -q -O - https://pkg.jenkins.io/debian/jenkins.io.key | sudo apt-key add -
+sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+sudo apt update -y
+sudo apt install -y jenkins && sudo systemctl status jenkins
+
 
